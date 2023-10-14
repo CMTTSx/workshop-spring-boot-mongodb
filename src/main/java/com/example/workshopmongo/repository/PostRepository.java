@@ -10,7 +10,8 @@ import com.example.workshopmongo.domain.Post;
 @Repository
 public interface PostRepository extends MongoRepository<Post, String> {
 
-    void save(List<Post> asList);
+	List<Post> findByTitleContaining(String text);
+
     
     
 }
